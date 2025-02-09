@@ -1,0 +1,136 @@
+body {
+  background-image: url('../static/assets/BG.jpg');
+  color: #444;
+  font-family: 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+}
+
+/* # Weather Card */
+
+.weather__card {
+  width: 800px;
+  padding: 40px 30px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  color: #3c4048;
+}
+.weather__card h2 {
+  font-size: 120px;
+  font-weight: 700;
+  color: #3c4048;
+  line-height: 0.8;
+}
+.weather__card h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 0.8;
+  color: #3c4048;
+}
+.weather__card h5 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 0.1;
+  color: #9d9d9d;
+}
+.weather__card img {
+  width: 120px;
+  height: 120px;
+}
+.weather__card .weather__description {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 5px 13px;
+  border: 0;
+  outline: none;
+  color: #7f8487;
+  font-size: 0.956rem;
+  font-weight: 400;
+}
+
+/* # Weather Status */
+
+.weather__status img {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+.weather__status span {
+  font-weight: 500;
+  color: #3c4048;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+}
+
+/* # Weather Forecast */
+
+.weather__forecast img {
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+}
+.weather__forecast span {
+  font-weight: 500;
+  color: #3c4048;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+/* # Loader */
+
+#loader {
+  height: 200px;
+  display: none;
+  justify-content: center;
+  align-items: end;
+}
+
+.loader {
+  width: 180px;
+  height: 140px;
+  display: block;
+  margin: 0 auto 20px;
+  background-image: radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
+    radial-gradient(circle 15px at 15px 15px, #fff 100%, transparent 0), linear-gradient(#fff 50px, transparent 0);
+  background-size: 50px 50px, 100px 75px, 50px 50px, 30px 32px, 136px 20px;
+  background-repeat: no-repeat;
+  background-position: 0px 30px, 30px 0px, 113px 29px, 147px 50px, 23px 60px;
+  position: relative;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 65px;
+  width: 2px;
+  height: 6px;
+  color: #fff;
+  box-sizing: border-box;
+  animation: animloader 0.6s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 25px 0 white, 50px 0 white, 75px 0 white, 100px 0 white, 125px 0 white, 150px 0 white, 25px 0 white, 50px 0 white, 75px 0 white, 100px 0 white, 125px 0 white, 150px 0 white;
+  }
+  50% {
+    box-shadow: 25px 20px white, 50px 60px rgba(255, 255, 255, 0), 75px 30px rgba(255, 255, 255, 0), 100px 70px rgba(255, 255, 255, 0), 125px 40px white, 150px 60px rgba(255, 255, 255, 0), 25px 20px white, 50px 30px white, 75px 10px white,
+      100px 30px white, 125px 30px rgba(255, 255, 255, 0), 150px 30px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 25px 60px rgba(255, 255, 255, 0), 50px 60px rgba(255, 255, 255, 0), 75px 50px rgba(255, 255, 255, 0), 100px 70px rgba(255, 255, 255, 0), 125px 70px rgba(255, 255, 255, 0), 150px 60px rgba(255, 255, 255, 0),
+      25px 80px rgba(255, 255, 255, 0), 50px 80px rgba(255, 255, 255, 0), 75px 70px rgba(255, 255, 255, 0), 100px 60px rgba(255, 255, 255, 0), 125px 30px rgba(255, 255, 255, 0), 150px 30px rgba(255, 255, 255, 0);
+  }
+}
